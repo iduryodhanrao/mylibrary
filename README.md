@@ -21,12 +21,13 @@ Getting Started:
 3. python app_run.py
 4. go to http://127.0.0.1:5000/ in your browser
 
-Defaults admin credentials: 
+Default admin credentials: 
 1. email: admin@gmail.com
 2. password: admin
 
 Sample screenprints:
-1. Admin options:
+1. Admin options: 
+To access admin options login using provided default admin credentials
 
 ![admin](./static/img/adminoptions.png)
 
