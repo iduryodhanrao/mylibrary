@@ -2,6 +2,7 @@
 Python Flask application for library management system features like:
 1. User and admin management
 2. Manage books and members additions and updates
+![loginpage](./static/img/LoginLibrary.png)
 
 Requirements:
 1. Python 3.7 or up
@@ -24,10 +25,13 @@ Default admin credentials:
 email: admin@gmail.com
 password: admin
 
-![loginpage](./static/img/LoginLibrary.png)
+Admin options:
 ![admin](./static/img/adminoptions.png)
+
+Member Options:
 ![member](./static/img/memberoptions.png)
-![showbooks](./static/img/showbooks.png)
+
+Return book activity screenprint:
 ![returnbook](./static/img/returnbook.png)
 
 
