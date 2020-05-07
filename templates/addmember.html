@@ -1,0 +1,16 @@
+{% extends "adminpage.html" %}
+{%block body2 %}
+   <h1><img src='../static/img/member.jpg' style = "Width:80px; border-radius:10px">
+       Add/Update member </h1>
+    <p> If member email exists, this form will update member
+        details otherwise add new member </p>
+    <hr>
+
+<form action="{{url_for('myapp.add_member')}}" method="post">
+
+    <input type="text" placeholder="Name" name="name">
+    <input type="text" placeholder="Email" name="email">
+    <input type="password" placeholder="Password" name="password">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

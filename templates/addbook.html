@@ -1,0 +1,17 @@
+{% extends "adminpage.html" %}
+{%block body2 %}
+   <h1><img src='../static/img/book.jpg' style = "Width:80px; border-radius:20px"> Add/Update Book </h1>
+<p>If book exists, this form will update book otherwise add the book </p>
+    <hr>
+
+<form action="{{url_for('myapp.add_book')}}" method="post">
+    <input type="text" placeholder="Bookname" name="bookname">
+    <input type="text" placeholder="Author" name="author">
+    <select id="available" name="available" >
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "adminpage.html" %}
+{%block body2 %}
+   <h1><img src='../static/img/book.jpg' style = "Width:100px; border-radius:10px">
+{% if ret == True %}
+   Return book
+{% else %}
+    Issue book
+{% endif %}
+
+   </h1>
+    <hr>
+
+    {% if ret == True %}
+    <form action= "{{url_for('myapp.return_book')}}" method="post">
+        <input type="text" placeholder="bookname" name="book">
+        <input type="text" placeholder="Member email" name="email">
+    {% else %}
+    <form action= "{{url_for('myapp.issue_book')}}" method="post">
+        <input type="text" placeholder="bookname" name="book">
+        <input type="text" placeholder="Member email" name="email">
+    {% endif %}
+    <input type="submit" value="Submit">
+</form>
+{% if ret == True %}
+<h3>Issued books</h3>
+{% else %}
+<h3>Available books</h3>
+{% endif %}
+<hr>
+<table>
+    <tr>
+        <th style="width:400px">Bookname</th>
+        {% if ret == True %}
+        <th style="width:400px">email</th>
+        <th style="width:400px">issuedt</th>
+        {% endif %}
+    </tr>
+    {% for book in booklist %}
+    <tr>
+        <td  style="width:400px">{{ book.name }}</td>
+        {% if ret == True %}
+        <td  style="width:400px">{{ book.email }}</td>
+        <td  style="width:400px">{{ book.issuedt }}</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "adminpage.html" %}
+{%block body2 %}
+   <h1><img src='../static/img/member.jpg' style = "Width:80px; border-radius:10px"> Members </h1>
+    <hr>
+<table>
+    <tr>
+        <th style="width:400px">Name</th>
+        <th style="width:400px">Email</th>
+    </tr>
+    {% for member in memberlist %}
+    <tr>
+        <td  style="width:400px">{{ member.username }}</td>
+        <td  style="width:400px">{{ member.email }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

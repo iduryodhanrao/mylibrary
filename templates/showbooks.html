@@ -1,0 +1,31 @@
+{% extends "adminpage.html" %}
+{%block body2 %}
+   <h1><img src='../static/img/book.jpg' style = "Width:80px; border-radius:20px">
+       {% if frametitle == "Your Books" %}
+       Your Issued books
+       {% elif frametitle == "Search Books" %}
+       Search book results
+       {% else %}
+       All Books
+       {% endif %}
+   </h1>
+    <hr>
+<table>
+    <tr>
+        <th style="width:400px">Bookname</th>
+        {% if frametitle != "Your Books" %}
+        <th style="width:400px">Author</th>
+        <th style="width:400px">Available</th>
+        {% endif %}
+    </tr>
+    {% for book in booklist %}
+    <tr>
+        <td  style="width:400px">{{ book.name }}</td>
+        {% if frametitle != "Your Books" %}
+        <td  style="width:400px">{{ book.author }}</td>
+        <td  style="width:400px">{{ book.available }}</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
