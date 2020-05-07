@@ -11,27 +11,31 @@ Requirements:
 4. SqlAlchemy
 
 Installation:
-pip install flask
-pip install sqlalchemy
+1. pip install flask
+2. pip install sqlalchemy
+
 
 Getting Started:
-git clone https://github.com/iduryodhanrao/mylibrary.git
-cd mylibrary
-python app_run.py
+1. git clone https://github.com/iduryodhanrao/mylibrary.git
+2. cd mylibrary
+3. python app_run.py
+4. go to http://127.0.0.1:5000/ in your browser
 
-go to http://127.0.0.1:5000/ in your browser
+Defaults admin credentials: 
+1. email: admin@gmail.com
+2. password: admin
 
-Default admin credentials: 
-email: admin@gmail.com
-password: admin
+Sample screenprints:
+1. Admin options:
 
-Admin options:
 ![admin](./static/img/adminoptions.png)
 
-Member Options:
+2. Member Options:
+
 ![member](./static/img/memberoptions.png)
 
-Return book activity screenprint:
+3. Return book activity:
+
 ![returnbook](./static/img/returnbook.png)
 
 
