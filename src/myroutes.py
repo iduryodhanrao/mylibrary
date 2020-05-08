@@ -5,7 +5,7 @@ from src.mymodel import db, Books, Bookloans, Members
 from sqlalchemy import and_
 from werkzeug.exceptions import HTTPException
 
-myapp = Blueprint("myapp", __name__,template_folder='templates')
+myapp = Blueprint("myapp", __name__,template_folder='../templates')
 
 @myapp.errorhandler(Exception)
 def handle_exception(e):
@@ -14,7 +14,7 @@ def handle_exception(e):
         return e
 
     # now you're handling non-HTTP exceptions only
-    flash("Error!!. Please retry with correct information and contact the developer")
+    flash("Error!!. Please retry with correct information or contact the developer")
     return render_template("about.html")
 
 

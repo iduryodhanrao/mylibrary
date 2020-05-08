@@ -17,7 +17,7 @@ Installation:
 
 Getting Started:
 1. git clone https://github.com/iduryodhanrao/mylibrary.git
-2. cd mylibrary
+2. cd mylibrary/src
 3. python app_run.py
 4. go to http://127.0.0.1:5000/ in your browser
 
