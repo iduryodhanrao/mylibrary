@@ -1,7 +1,7 @@
 from datetime import date
 from flask import Blueprint
-from flask import Flask, render_template, flash, request, session, redirect
-from mymodel import db, Books, Bookloans, Members
+from flask import render_template, flash, request, session, redirect
+from src.mymodel import db, Books, Bookloans, Members
 from sqlalchemy import and_
 from werkzeug.exceptions import HTTPException
 
@@ -93,7 +93,6 @@ def about():
 def changepwd():
     if request.method == 'POST':
         m = Members.query.filter(Members.email == request.form['email']).first()
-        print (m.email)
         if request.form['password'] == request.form['confirmpassword']:
             if m != None:
                 m.password = request.form['password']

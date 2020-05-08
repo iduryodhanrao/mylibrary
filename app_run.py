@@ -1,6 +1,6 @@
 from flask import Flask
-from mymodel import db
-from myroutes import myapp
+from src.mymodel import db
+from src.myroutes import myapp
 
 app = Flask(__name__)
 app.config['FLASK_ENV']="development"
